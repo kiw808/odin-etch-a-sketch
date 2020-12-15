@@ -1,3 +1,3 @@
 # Etch-a-Sketch
-###### The Odin Project
+##### The Odin Project
 ###### Entry by Pierre Muller
