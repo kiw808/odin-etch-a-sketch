@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+}
+
+.grid-item {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.grid-item::before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+}
+
+.grid-item:hover {
+    background-color: black;
+}
