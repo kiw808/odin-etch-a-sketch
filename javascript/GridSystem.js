@@ -8,12 +8,20 @@ export default class GridSystem {
         this.createGrid(this.numberOfItems);
     }
 
+    /**
+     * Removes all grid elements
+     */
     resetGrid () {
         this.grid.forEach(element => {
             element.remove();
         })
     }
 
+    /**
+     * Creates a new set of div elements inside the grid wrapper
+     * 
+     * @param {number} numberOfItems 
+     */
     createGrid (numberOfItems) {
         this.resetGrid();
 

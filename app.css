@@ -33,6 +33,7 @@ header {
 }
 
 .grid-wrapper {
+    overflow: hidden;
     border-radius: 20px;
     display: grid;
 }
