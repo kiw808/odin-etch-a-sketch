@@ -1,8 +1,7 @@
-const gridButton = document.querySelector('#new-grid');
-
-class GridSystem {
+export default class GridSystem {
     constructor (gridSide) {
         this.gridWrapper = document.querySelector('.grid-wrapper');
+        this.grid = this.gridWrapper.querySelectorAll('.grid-item');
         this.gridSide = gridSide;
         this.numberOfItems = gridSide * gridSide;
 
@@ -10,9 +9,7 @@ class GridSystem {
     }
 
     resetGrid () {
-        let grid = this.gridWrapper.querySelectorAll('.grid-item');
-        
-        grid.forEach(element => {
+        this.grid.forEach(element => {
             element.remove();
         })
     }
@@ -26,20 +23,17 @@ class GridSystem {
             let gridElement = document.createElement('div');
             gridElement.classList.add('grid-item');
             gridElement.setAttribute('id', 'item-' + (i + 1));
+            gridElement.style.opacity = 0.1;
+
+            gridElement.addEventListener('mouseover', () => {
+                gridElement.style.opacity = 1;
+            })
 
             gridElement.addEventListener('mouseleave', () => {
-                gridElement.style.opacity = 0.5; 
-                console.log(gridElement.style.opacity);
+                gridElement.style.opacity = 0.5;
             })
 
             this.gridWrapper.appendChild(gridElement);
         }
     }
 }
-
-function createNewGrid() {
-    let gridSide = prompt('How many squares per side ?');
-    new GridSystem(gridSide)
-}
-
-gridButton.addEventListener('click', createNewGrid);
