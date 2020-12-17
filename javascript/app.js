@@ -5,7 +5,7 @@ const gridButton = document.querySelector('#new-grid');
 const eraseButton = document.querySelector('#erase');
 
 // Instantiate a new grid system
-let etchySketchy = new GridSystem(16);
+let etchySketchy = new GridSystem();
 
 /**
  * Callback function to create a nnew grid

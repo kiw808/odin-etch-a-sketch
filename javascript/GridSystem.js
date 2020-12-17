@@ -1,5 +1,5 @@
 export default class GridSystem {
-    constructor (gridSide) {
+    constructor (gridSide = 16) {
         this.gridWrapper = document.querySelector('.grid-wrapper');
         this.grid = this.gridWrapper.querySelectorAll('.grid-item');
         this.gridSide = gridSide;
