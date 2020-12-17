@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
+
     <link rel="stylesheet" href="app.css">
+    <script type="module" src="./javascript/app.js" async></script>
 </head>
 <body>
-    
-    <script type="text/javascript" src="app.js"></script>
+    <header class="container">
+        <h1 class="title">Etch-a-Sketch</h1>
+        <div>
+            <button class="button" id="new-grid">New grid</button>
+            <button class="button yellow" id="erase">Erase</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="app">
+                <div class="grid-wrapper">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made by <a href="https://github.com/kiw808">Pierre Muller</a> for The Odin Project curriculum</p>
+        </div>
+    </footer>
 </body>
 </html>
